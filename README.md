@@ -1,4 +1,4 @@
-# food_exchange
+# food_exchange (Only for educated)
 This is a website that my friends from another major designed and request to create. It's used to calculate the ratio that you'll receive from eating food.
 (my describe can be incorrect cause English isn't my mother language)
 
