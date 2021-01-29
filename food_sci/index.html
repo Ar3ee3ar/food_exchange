@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        img{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Colorlib Templates">
+    <meta name="author" content="Colorlib">
+    <meta name="keywords" content="Colorlib Templates">
+
+    <!-- Title Page-->
+    <title>FOOD EXCHANGE</title>
+
+    <!-- Icons font CSS-->
+    <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+    <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <script src="https://kit.fontawesome.com/a1850e5a9e.js" crossorigin="anonymous"></script>
+    <!-- Font special for pages-->
+    <link href="font" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Chonburi&display=swap" rel="stylesheet"> 
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Mali:wght@300&display=swap" rel="stylesheet">
+
+    <!-- Vendor CSS-->
+    <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
+
+    <!-- Main CSS-->
+    <link href="css/main.css" rel="stylesheet" media="all">
+    <html xmlns="http://www.w3.org/1999/xhtml">
+    <script>
+        var httpRequest;
+        function cal(){
+            var a = document.getElementById("piece").value;
+            var b = document.getElementById("eat").value;
+            if(a==""||a==0||b==0){
+                if(a==""||a==0){
+                    alert("คุณกรอกจำนวนส่วนอาหารผิด แต่เราจะเปลี่ยนให้เป็นค่าที่คิดได้ หากต้องการค่าใหม่ โปรดกรอกใหม่");
+                    document.getElementById("piece").value = "1";
+                    a = document.getElementById("piece").value;
+                }
+                if(b==0){
+                    alert("จำนวนอาหารที่กินต้องมากกว่า 0 แต่เราจะเปลี่ยนให้เป็นค่าที่คิดได้ หากต้องการค่าใหม่ โปรดกรอกใหม่");
+                    document.getElementById("eat").value = "1";
+                    b = document.getElementById("eat").value;
+                }
+            }
+            document.getElementById("result").value = (b/a)+" ส่วน";
+        }
+    </script>
+
+</head>
+
+<body>
+    
+    <form action="logindata.php">
+        
+        <div class="font-robo">
+            <div class="wrapper wrapper--w960">
+                <div class="card card-2">
+                    <span class="card-heading">
+                    </span>
+                    <div class="card-body">
+                        <form>
+                            <span class="overlay"><img src="images/icon.png" style="width: 100px; height: 100px; margin-top: 10%;"></span>
+                            <h1 style="color:#fbb543; text-align: center; padding-bottom: 40px;font-family: 'Chonburi', cursive;">FOOD EXCHANGE</h1>
+                            <!--<div class="input-group">
+                                <input class="input--style-2" type="text" name ="ID_Cus" disabled="disabled" value="<?=$autoid?>">
+                            </div>-->
+                            <div class="input-group">
+                                <span for="piece" style="color:white;">1 ส่วน  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = </span>
+                                <input class="input--style-2" type="number" value=0 name="piece" id="piece" Required><span style="color:white;float: right;margin-top: 13px;">กรัม</span>
+                            </div>
+                            <div class="input-group">
+                                <span for="eat" style="color:white;">ปริมาณที่รับประทาน =</span>
+                                <input class="input--style-2" type="number" value=0 name="eat" id="eat" Required><span style="color:white;float: right;margin-top: 13px;">กรัม</span>
+                            </div>
+                            <div class="p-t-30 center" style="color:white;">
+                                <button class="btn btn--radius btn--green" type="button" onclick="cal()">คำนวณ</button>
+                            </div>
+                            <div class="input-group">
+                                <label for="result"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                                <input id="result" class="input--style-2" type="text"  style="color: #fbb543; text-align: center; margin-left: 0%;font-size: 20px;width: 100%;margin-bottom: 10%;">
+                            </div>
+                            <!--<div class="input-group">
+                            <tr>
+                                <td><select id="province" class="input--style-2">
+                                <option>- กรุณาเลือกจังหวัด -</option>
+                                </select></td>
+                            </tr>
+                            <tr>
+                                    <td><select id="amphur" class="input--style-2">
+                                    <option>- กรุณาเลือกเขต/อำเภอ -</option>
+                                    </select></td>
+                                </tr>
+                                <tr>
+                                    <td><select id="district" class="input--style-2">
+                                    <option>- กรุณาเลือกแขวง/ตำบล -</option>
+                                    </select></td>
+                                </tr>
+                            </div>-->
+                            
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <!-- Jquery JS-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <!-- Vendor JS-->
+    <script src="vendor/select2/select2.min.js"></script>
+    <script src="vendor/datepicker/moment.min.js"></script>
+    <script src="vendor/datepicker/daterangepicker.js"></script>
+
+    <!-- Main JS-->
+    <script src="js/global.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script type="text/javascript" src="AutoProvince.js"></script>
+
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+
+</html>
+<!-- end document-->
