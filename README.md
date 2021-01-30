@@ -6,5 +6,5 @@ see website: https://food-exchange-dd46b.web.app/
 
 # review
 ![review](https://github.com/Arzeezar/food_exchange/blob/main/review_img/food_ex.png)
-![review](https://github.com/Arzeezar/food_exchange/blob/main/review_img/pre_food_ex.png)
+![review](https://github.com/Arzeezar/food_exchange/blob/main/review_img/pre_food_ex.jpg)
 
